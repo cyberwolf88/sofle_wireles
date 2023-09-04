@@ -17,6 +17,27 @@
         };
     };
 
+    macros {
+        a7_ping: a7_ping {
+            compatible = "zmk,behavior-macro";
+            label = "A7_PING";
+            #binding-cells = <0>;
+            bindings = <&none &kp P &kp I &kp N &kp G &kp SPACE &kp N8 &kp DOT &kp N8 &kp DOT &kp N8 &kp DOT &kp N8>;
+        };
+        a13: a13 {
+            compatible = "zmk,behavior-macro";
+            label = "A13";
+            #binding-cells = <0>;
+            bindings = <&none &kp N8 &kp N8 &kp N7 &kp N7 &kp N8 &kp N8 &kp N7 &kp N7 &kp N8 &kp N8 &kp N7 &kp N7>;
+        };
+        a8: a8 {
+            compatible = "zmk,behavior-macro";
+            label = "A8";
+            #binding-cells = <0>;
+            bindings = <&none &kp C &kp Y &kp B &kp E &kp R &kp W &kp O &kp L &kp F &kp N8 &kp N8 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -72,8 +93,8 @@
             //              |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans  &trans         &trans            &trans          &trans                                &trans                 &trans           &trans             &trans            &trans                &trans
-&trans  &trans  &trans         &trans            &trans          &trans                                &trans                 &trans           &trans             &trans            &kp RIGHT_BRACKET     &kp NON_US_BACKSLASH
+&trans  &trans  &trans         &trans            &trans          &trans                                &a7_ping               &a8              &trans             &trans            &trans                &trans
+&trans  &trans  &trans         &trans            &trans          &trans                                &a13                   &trans           &trans             &trans            &kp RIGHT_BRACKET     &kp NON_US_BACKSLASH
 &trans  &trans  &kp LESS_THAN  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS                  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN  &kp MINUS             &kp EQUAL
 &trans  &trans  &trans         &trans            &trans          &trans                &trans  &trans  &kp DEL                &trans           &trans             &trans            &kp NON_US_BACKSLASH  &trans
                 &trans         &trans            &trans          &trans                &trans  &trans  &trans                 &trans           &trans             &trans
