@@ -18,21 +18,21 @@
     };
 
     macros {
-        a7_ping: a7_ping {
+        aaa_ping: aaa_ping {
             compatible = "zmk,behavior-macro";
-            label = "A7_PING";
+            label = "AAA_PING";
             #binding-cells = <0>;
             bindings = <&none &kp P &kp I &kp N &kp G &kp SPACE &kp N8 &kp DOT &kp N8 &kp DOT &kp N8 &kp DOT &kp N8>;
         };
-        a13: a13 {
+        aaa_8877: aaa_8877 {
             compatible = "zmk,behavior-macro";
-            label = "A13";
+            label = "AAA_8877";
             #binding-cells = <0>;
             bindings = <&none &kp N8 &kp N8 &kp N7 &kp N7 &kp N8 &kp N8 &kp N7 &kp N7 &kp N8 &kp N8 &kp N7 &kp N7>;
         };
-        a8: a8 {
+        aaa_email: aaa_email {
             compatible = "zmk,behavior-macro";
-            label = "A8";
+            label = "AAA_EMAIL";
             #binding-cells = <0>;
             bindings = <&none &kp C &kp Y &kp B &kp E &kp R &kp W &kp O &kp L &kp F &kp N8 &kp N8 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
@@ -50,11 +50,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE  &kp NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5                         &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9   &kp KP_NUMBER_0  &kp BACKSPACE
-&kp TAB     &kp Q         &kp W            &kp E            &kp R            &kp T                                   &kp Y            &kp U            &kp I            &kp O             &kp P            &kp LEFT_BRACKET
-&kp GRAVE   &kp A         &kp S            &kp D            &kp F            &kp G                                   &kp H            &kp J            &kp K            &kp L             &kp SEMI         &kp DOUBLE_QUOTES
-&kp LSHFT   &kp Z         &kp X            &kp C            &kp V            &kp B            &kp K_MUTE  &to 1      &kp N            &kp M            &kp COMMA        &kp GREATER_THAN  &kp SLASH        &kp RSHFT
-                          &kp LC(LCTRL)    &kp LWIN         &kp LALT         &lt 3 TAB        &kp SPACE   &kp ENTER  &lt 3 BACKSPACE  &kp RALT         &kp RWIN         &kp RCTRL
+&kp ESCAPE  &kp NUMBER_1  &kp N2         &kp N3    &kp N4    &kp N5                              &kp N6           &kp N7    &kp N8     &kp N9      &kp N0     &kp BACKSPACE
+&kp TAB     &kp Q         &kp W          &kp E     &kp R     &kp T                               &kp Y            &kp U     &kp I      &kp O       &kp P      &kp LEFT_BRACKET
+&kp GRAVE   &kp A         &kp S          &kp D     &kp F     &kp G                               &kp H            &kp J     &kp K      &kp L       &kp SEMI   &kp DOUBLE_QUOTES
+&kp LSHFT   &kp Z         &kp X          &kp C     &kp V     &kp B      &kp K_MUTE  &to 1        &kp N            &kp M     &kp COMMA  &kp PERIOD  &kp SLASH  &kp RSHFT
+                          &kp LC(LCTRL)  &kp LWIN  &kp LALT  &lt 3 TAB  &kp SPACE   &lt 2 ENTER  &lt 3 BACKSPACE  &kp RALT  &kp RWIN   &kp RCTRL
             >;
 
             sensor-bindings =
@@ -93,8 +93,8 @@
             //              |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans  &trans         &trans            &trans          &trans                                &a7_ping               &a8              &trans             &trans            &trans                &trans
-&trans  &trans  &trans         &trans            &trans          &trans                                &a13                   &trans           &trans             &trans            &kp RIGHT_BRACKET     &kp NON_US_BACKSLASH
+&trans  &trans  &trans         &trans            &trans          &trans                                &aaa_ping              &aaa_email       &trans             &trans            &trans                &trans
+&trans  &trans  &trans         &trans            &trans          &trans                                &aaa_8877              &trans           &trans             &trans            &kp RIGHT_BRACKET     &kp NON_US_BACKSLASH
 &trans  &trans  &kp LESS_THAN  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS                  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN  &kp MINUS             &kp EQUAL
 &trans  &trans  &trans         &trans            &trans          &trans                &trans  &trans  &kp DEL                &trans           &trans             &trans            &kp NON_US_BACKSLASH  &trans
                 &trans         &trans            &trans          &trans                &trans  &trans  &trans                 &trans           &trans             &trans
